@@ -67,9 +67,23 @@ All colors and spacing are defined as CSS custom properties at the top of `css/s
 
 ## Deploying to GitHub Pages
 
-1. Create a new GitHub repository and push this entire folder's contents to it.
-2. In the repository, go to **Settings → Pages**.
-3. Under "Build and deployment", set **Source** to `Deploy from a branch`, choose your default branch and the `/ (root)` folder.
-4. Save — your site will be live at `https://<your-username>.github.io/<repo-name>/` within a minute or two.
+Push the **contents** of this folder to the root of your repository (not the folder itself nested inside another folder — `index.html` must sit at the repo root).
 
-No build step, package manager, or server is required.
+You have two options for the Source setting under **Settings → Pages → Build and deployment**:
+
+### Option A — "Deploy from a branch" (simplest, recommended)
+1. Set **Source** to `Deploy from a branch`.
+2. Choose your default branch and the `/ (root)` folder.
+3. Save. Your site goes live at `https://<your-username>.github.io/<repo-name>/` within a minute or two.
+4. If you go this route, you can delete the `.github/workflows/static.yml` file included in this project — it isn't needed.
+
+### Option B — "GitHub Actions"
+1. Set **Source** to `GitHub Actions`.
+2. This project already includes `.github/workflows/static.yml`, the official non-Jekyll static-site workflow. It uploads the repo as-is and deploys it — no build step, no Jekyll.
+3. **Important:** if GitHub auto-created a different workflow file for you (commonly named `jekyll-gh-pages.yml`), delete it, or keep only one workflow — having two Pages-deploying workflows can cause failed or conflicting runs.
+4. The workflow triggers on pushes to the `main` branch. If your default branch is named something else (e.g. `master`), edit the `branches: ["main"]` line in `static.yml` to match.
+
+### Why the build was failing
+GitHub's default Pages workflow assumes a **Jekyll** site and runs `bundle exec jekyll build`. Since this project has no `Gemfile` or Jekyll config, that build fails. The included `.nojekyll` file and `static.yml` workflow bypass Jekyll entirely so plain HTML/CSS/JS deploys without errors.
+
+No build step, package manager, or server is required for the site itself.
