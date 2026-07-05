@@ -39,7 +39,7 @@ Iram-Wellness-Zone/
 All images in `images/` are generated placeholders labelled with what they should become. Replace them **using the exact same filenames** and everything will update automatically:
 
 - `images/hero/hero-background.jpg` — a wide (1920×1080 or larger) photo for the hero background
-- `Images/before-after/transformation-1-before.jpg` / `-after.jpg` (and `-2-`, `-3-`) — real member photos
+- `images/before-after/transformation-1-before.jpg` / `-after.jpg` (and `-2-`, `-3-`) — real member photos
 - `images/testimonials/avatar-1.jpg`, `avatar-2.jpg`, `avatar-3.jpg` — member profile photos
 
 ### 2. Add more transformations

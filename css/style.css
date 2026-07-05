@@ -540,7 +540,7 @@ section { padding: var(--gap-section) 0; }
 
 .reveal-slider {
   position: relative;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/4;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
@@ -557,6 +557,7 @@ section { padding: var(--gap-section) 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 15%;
   pointer-events: none;
 }
 .reveal-slider .ra-img {
@@ -663,7 +664,7 @@ section { padding: var(--gap-section) 0; }
   grid-template-columns: 1fr 1fr;
 }
 .lightbox-images figure { position: relative; margin: 0; }
-.lightbox-images img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; }
+.lightbox-images img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; aspect-ratio: 3/4; }
 .lightbox-images figcaption {
   position: absolute;
   bottom: 12px; left: 12px;
