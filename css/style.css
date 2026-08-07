@@ -302,7 +302,7 @@ section { padding: var(--gap-section) 0; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../images/hero/hero-background.jpg');
+  background-image: url('../images/hero/heroBG.jpg');
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -447,7 +447,7 @@ section { padding: var(--gap-section) 0; }
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('../images/hero/hero-background.jpg');
+  background-image: url('../images/hero/heroBG.jpg');
   background-size: cover;
   background-position: center;
   mix-blend-mode: multiply;
